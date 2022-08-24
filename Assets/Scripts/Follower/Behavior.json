@@ -1,0 +1,169 @@
+{
+    "version": "0.3.0",
+    "scope": "tree",
+    "id": "cae8bebf-bf5e-4330-8c48-f1df4fe6eedb",
+    "title": "Follower",
+    "description": "",
+    "root": "b0abc822-b881-48b4-a555-7d2c943230fd",
+    "properties": {},
+    "nodes": {
+      "b0abc822-b881-48b4-a555-7d2c943230fd": {
+        "id": "b0abc822-b881-48b4-a555-7d2c943230fd",
+        "name": "RepeatForever",
+        "title": "RepeatForever",
+        "description": "",
+        "properties": {},
+        "display": {
+          "x": -72,
+          "y": -264
+        },
+        "child": "3c4941c7-0472-433c-877e-d8d0dde6c2ee"
+      },
+      "3c4941c7-0472-433c-877e-d8d0dde6c2ee": {
+        "id": "3c4941c7-0472-433c-877e-d8d0dde6c2ee",
+        "name": "Sequence",
+        "title": "Sequence",
+        "description": "",
+        "properties": {},
+        "display": {
+          "x": -72,
+          "y": -144
+        },
+        "children": [
+          "fa1253f6-9f40-4345-8e7d-df51cb45e610",
+          "372f2696-aab7-4162-9e88-1d2abab9f30b"
+        ]
+      },
+      "fa1253f6-9f40-4345-8e7d-df51cb45e610": {
+        "id": "fa1253f6-9f40-4345-8e7d-df51cb45e610",
+        "name": "Follow",
+        "title": "Follow",
+        "description": "",
+        "properties": {},
+        "display": {
+          "x": -312,
+          "y": -24
+        }
+      },
+      "3f81c4f2-5499-4506-838b-cda0815f98f3": {
+        "id": "3f81c4f2-5499-4506-838b-cda0815f98f3",
+        "name": "WalkAround",
+        "title": "WalkAround",
+        "description": "",
+        "properties": {},
+        "display": {
+          "x": -108,
+          "y": 132
+        }
+      },
+      "372f2696-aab7-4162-9e88-1d2abab9f30b": {
+        "id": "372f2696-aab7-4162-9e88-1d2abab9f30b",
+        "name": "Sequence",
+        "title": "Sequence",
+        "description": "",
+        "properties": {},
+        "display": {
+          "x": -24,
+          "y": -48
+        },
+        "children": [
+          "3f81c4f2-5499-4506-838b-cda0815f98f3",
+          "084838eb-a72d-4e0e-8f21-b1429900011c"
+        ]
+      },
+      "084838eb-a72d-4e0e-8f21-b1429900011c": {
+        "id": "084838eb-a72d-4e0e-8f21-b1429900011c",
+        "name": "Wait",
+        "title": "Wait <milliseconds>ms",
+        "description": "",
+        "properties": {
+          "milliseconds": 500
+        },
+        "display": {
+          "x": 60,
+          "y": 132
+        }
+      }
+    },
+    "display": {
+      "camera_x": 960,
+      "camera_y": 468.5,
+      "camera_z": 1,
+      "x": -72,
+      "y": -396
+    },
+    "custom_nodes": [
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "WalkAround",
+        "category": "action",
+        "title": null,
+        "description": null,
+        "properties": {}
+      },
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "Follow",
+        "category": "action",
+        "title": null,
+        "description": null,
+        "properties": {}
+      },
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "ParallelSequence",
+        "category": "composite",
+        "title": null,
+        "description": null,
+        "properties": {}
+      },
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "Parallel",
+        "category": "composite",
+        "title": null,
+        "description": null,
+        "properties": {}
+      },
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "RepeatForever",
+        "category": "decorator",
+        "title": null,
+        "description": null,
+        "properties": {}
+      },
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "Patrol",
+        "category": "action",
+        "title": null,
+        "description": null,
+        "properties": {}
+      },
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "FindTarget",
+        "category": "action",
+        "title": null,
+        "description": null,
+        "properties": {}
+      },
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "AttackTarget",
+        "category": "action",
+        "title": null,
+        "description": null,
+        "properties": {}
+      }
+    ]
+  }

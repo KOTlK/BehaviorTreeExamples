@@ -1,0 +1,1 @@
+Aggressive cube attacks circle while it's in his range and alive.

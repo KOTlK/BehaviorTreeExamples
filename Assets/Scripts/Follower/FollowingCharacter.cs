@@ -1,5 +1,5 @@
 ﻿using BananaParty.BehaviorTree;
-using Examples.Extensions;
+using Examples;
 using Examples.Follower.Behavior;
 
 namespace Examples.Follower

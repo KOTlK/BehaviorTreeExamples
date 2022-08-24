@@ -1,4 +1,4 @@
-﻿using Examples.Extensions;
+﻿using Examples;
 using UnityEngine;
 
 namespace Examples.Follower

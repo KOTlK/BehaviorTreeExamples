@@ -1,0 +1,287 @@
+{
+    "version": "0.3.0",
+    "scope": "tree",
+    "id": "dd83f253-68e0-497c-8e0d-bee86bf3aad7",
+    "title": "Warrior",
+    "description": "",
+    "root": "400ac505-349b-4c1f-8e88-bda56771d31f",
+    "properties": {},
+    "nodes": {
+      "400ac505-349b-4c1f-8e88-bda56771d31f": {
+        "id": "400ac505-349b-4c1f-8e88-bda56771d31f",
+        "name": "RepeatForever",
+        "title": "RepeatForever",
+        "description": "",
+        "properties": {},
+        "display": {
+          "x": -48,
+          "y": -264
+        },
+        "child": "761b6f91-3af4-4b57-9e9a-52de1c16b5df"
+      },
+      "f742da57-df89-4e58-8a27-8b05186aeeee": {
+        "id": "f742da57-df89-4e58-8a27-8b05186aeeee",
+        "name": "ParallelSequence",
+        "title": "ParallelSequence",
+        "description": "",
+        "properties": {},
+        "display": {
+          "x": -504,
+          "y": 120
+        },
+        "children": [
+          "0461b32b-eb31-4f4c-8fdd-aaab927b68a8",
+          "634f16c3-4278-4bb7-bef5-150cf068b035"
+        ]
+      },
+      "d004040b-cef0-4100-921f-7dbc31e9a15e": {
+        "id": "d004040b-cef0-4100-921f-7dbc31e9a15e",
+        "name": "FindTarget",
+        "title": "FindTarget",
+        "description": "",
+        "properties": {},
+        "display": {
+          "x": -756,
+          "y": 612
+        }
+      },
+      "634f16c3-4278-4bb7-bef5-150cf068b035": {
+        "id": "634f16c3-4278-4bb7-bef5-150cf068b035",
+        "name": "Patrol",
+        "title": "Patrol",
+        "description": "",
+        "properties": {},
+        "display": {
+          "x": -408,
+          "y": 240
+        }
+      },
+      "761b6f91-3af4-4b57-9e9a-52de1c16b5df": {
+        "id": "761b6f91-3af4-4b57-9e9a-52de1c16b5df",
+        "name": "Sequence",
+        "title": "Sequence",
+        "description": "",
+        "properties": {},
+        "display": {
+          "x": -48,
+          "y": -156
+        },
+        "children": [
+          "86496f51-7f75-4bfb-b425-b098ce911f38",
+          "eb4085cd-0155-4ec1-8d56-bb0add81e849"
+        ]
+      },
+      "3d9231a9-cb77-4b23-8361-457e6be5f951": {
+        "id": "3d9231a9-cb77-4b23-8361-457e6be5f951",
+        "name": "AttackTarget",
+        "title": "AttackTarget",
+        "description": "",
+        "properties": {},
+        "display": {
+          "x": -108,
+          "y": 204
+        }
+      },
+      "711b0d0d-30d1-4353-bb98-863d87886805": {
+        "id": "711b0d0d-30d1-4353-bb98-863d87886805",
+        "name": "Wait",
+        "title": "Wait <milliseconds>",
+        "description": "",
+        "properties": {
+          "milliseconds": "Delay"
+        },
+        "display": {
+          "x": 60,
+          "y": 204
+        }
+      },
+      "ad8b4cd3-6ac4-4743-88ef-6e965e527954": {
+        "id": "ad8b4cd3-6ac4-4743-88ef-6e965e527954",
+        "name": "FollowTarget",
+        "title": "FollowTarget",
+        "description": "",
+        "properties": {},
+        "display": {
+          "x": 216,
+          "y": 108
+        }
+      },
+      "eb4085cd-0155-4ec1-8d56-bb0add81e849": {
+        "id": "eb4085cd-0155-4ec1-8d56-bb0add81e849",
+        "name": "ParallelSequence",
+        "title": "ParallelSequence",
+        "description": "",
+        "properties": {},
+        "display": {
+          "x": 96,
+          "y": -24
+        },
+        "children": [
+          "82b91740-2c61-4c10-a6e8-76031700f7d7",
+          "ad8b4cd3-6ac4-4743-88ef-6e965e527954"
+        ]
+      },
+      "82b91740-2c61-4c10-a6e8-76031700f7d7": {
+        "id": "82b91740-2c61-4c10-a6e8-76031700f7d7",
+        "name": "Sequence",
+        "title": "Sequence",
+        "description": "",
+        "properties": {},
+        "display": {
+          "x": -24,
+          "y": 108
+        },
+        "children": [
+          "3d9231a9-cb77-4b23-8361-457e6be5f951",
+          "711b0d0d-30d1-4353-bb98-863d87886805"
+        ]
+      },
+      "90873ea2-7da0-4f5a-ad89-1a3c63b5ac26": {
+        "id": "90873ea2-7da0-4f5a-ad89-1a3c63b5ac26",
+        "name": "Sequence",
+        "title": "Sequence",
+        "description": "",
+        "properties": {},
+        "display": {
+          "x": -660,
+          "y": 360
+        },
+        "children": [
+          "3867e61a-507d-427e-87a7-5664db0b6913",
+          "71652728-bdac-4b27-9a02-0cb631a64c54"
+        ]
+      },
+      "71652728-bdac-4b27-9a02-0cb631a64c54": {
+        "id": "71652728-bdac-4b27-9a02-0cb631a64c54",
+        "name": "Wait",
+        "title": "Wait <milliseconds>ms",
+        "description": "",
+        "properties": {
+          "milliseconds": 500
+        },
+        "display": {
+          "x": -588,
+          "y": 480
+        }
+      },
+      "3867e61a-507d-427e-87a7-5664db0b6913": {
+        "id": "3867e61a-507d-427e-87a7-5664db0b6913",
+        "name": "Inverter",
+        "title": "Inverter",
+        "description": "",
+        "properties": {},
+        "display": {
+          "x": -756,
+          "y": 492
+        },
+        "child": "d004040b-cef0-4100-921f-7dbc31e9a15e"
+      },
+      "0461b32b-eb31-4f4c-8fdd-aaab927b68a8": {
+        "id": "0461b32b-eb31-4f4c-8fdd-aaab927b68a8",
+        "name": "RepeatUntilFailure",
+        "title": "Repeat Until Failure",
+        "description": "",
+        "properties": {
+          "maxLoop": -1
+        },
+        "display": {
+          "x": -660,
+          "y": 252
+        },
+        "child": "90873ea2-7da0-4f5a-ad89-1a3c63b5ac26"
+      },
+      "86496f51-7f75-4bfb-b425-b098ce911f38": {
+        "id": "86496f51-7f75-4bfb-b425-b098ce911f38",
+        "name": "Inverter",
+        "title": "Inverter",
+        "description": "",
+        "properties": {},
+        "display": {
+          "x": -504,
+          "y": -12
+        },
+        "child": "f742da57-df89-4e58-8a27-8b05186aeeee"
+      }
+    },
+    "display": {
+      "camera_x": 1291,
+      "camera_y": 191.5,
+      "camera_z": 1,
+      "x": -48,
+      "y": -360
+    },
+    "custom_nodes": [
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "WalkAround",
+        "category": "action",
+        "title": null,
+        "description": null,
+        "properties": {}
+      },
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "ParallelSequence",
+        "category": "composite",
+        "title": null,
+        "description": null,
+        "properties": {}
+      },
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "Parallel",
+        "category": "composite",
+        "title": null,
+        "description": null,
+        "properties": {}
+      },
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "RepeatForever",
+        "category": "decorator",
+        "title": null,
+        "description": null,
+        "properties": {}
+      },
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "Patrol",
+        "category": "action",
+        "title": null,
+        "description": null,
+        "properties": {}
+      },
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "FindTarget",
+        "category": "action",
+        "title": null,
+        "description": null,
+        "properties": {}
+      },
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "AttackTarget",
+        "category": "action",
+        "title": null,
+        "description": null,
+        "properties": {}
+      },
+      {
+        "version": "0.3.0",
+        "scope": "node",
+        "name": "FollowTarget",
+        "category": "action",
+        "title": null,
+        "description": null,
+        "properties": {}
+      }
+    ]
+  }

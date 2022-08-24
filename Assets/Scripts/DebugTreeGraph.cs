@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using BananaParty.BehaviorTree;
 
-namespace Examples.Extensions
+namespace Examples
 {
     public class DebugTreeGraph : ITreeGraph<IReadOnlyBehaviorNode>
     {

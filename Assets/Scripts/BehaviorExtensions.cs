@@ -1,6 +1,6 @@
 ﻿using BananaParty.BehaviorTree;
 
-namespace Examples.Extensions
+namespace Examples
 {
     public static class BehaviorExtensions
     {

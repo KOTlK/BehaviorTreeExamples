@@ -2,7 +2,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace Examples.Extensions
+namespace Examples
 {
     public class TreeVisualization : MonoBehaviour, ITreeGraph<IReadOnlyBehaviorNode>
     {
