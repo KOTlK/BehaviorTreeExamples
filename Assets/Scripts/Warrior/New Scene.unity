@@ -548,7 +548,7 @@ MonoBehaviour:
   _speed: 5
   _damage: 10
   _attackDelay: 3000
-  _maxHealth: 100
+  _maxHealth: 10000
   _targetFindRange: 5
   _patrolWay: []
 --- !u!50 &912227725

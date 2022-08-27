@@ -5,13 +5,13 @@ namespace Examples.Warrior.Behavior
 {
     public class FollowTarget : BehaviorNode
     {
-        private readonly ITarget<IAggressiveCharacter> _target;
+        private readonly ITarget<AggressiveCharacter> _target;
         private readonly IMovingCharacter _origin;
 
         private const float MinDistance = 2f;
         private const float MaxDistance = 100f;
 
-        public FollowTarget(ITarget<IAggressiveCharacter> target, IMovingCharacter origin)
+        public FollowTarget(ITarget<AggressiveCharacter> target, IMovingCharacter origin)
         {
             _target = target;
             _origin = origin;
@@ -23,7 +23,11 @@ namespace Examples.Warrior.Behavior
             
             var direction = _target.Current.Position - _origin.Position;
 
-            if (direction.sqrMagnitude > MaxDistance) return BehaviorNodeStatus.Failure;
+            if (direction.sqrMagnitude > MaxDistance)
+            {
+                _target.Reset();
+                return BehaviorNodeStatus.Failure;
+            }
 
             if (direction.sqrMagnitude > MinDistance)
             {

@@ -9,11 +9,11 @@ namespace Examples.Warrior.Behavior
     public class FindTarget : BehaviorNode
     {
         private readonly float _range;
-        private readonly ITarget<IAggressiveCharacter> _target;
+        private readonly ITarget<AggressiveCharacter> _target;
         private readonly IMovingCharacter _origin;
         private readonly Collider2D[] _results;
 
-        public FindTarget(float range, ITarget<IAggressiveCharacter> target, IMovingCharacter origin)
+        public FindTarget(float range, ITarget<AggressiveCharacter> target, IMovingCharacter origin)
         {
             _range = range;
             _target = target;
@@ -34,13 +34,13 @@ namespace Examples.Warrior.Behavior
 
             if (notNull.Any() == false) return BehaviorNodeStatus.Failure;
 
-            var damageable = new List<IAggressiveCharacter>();
+            var damageable = new List<AggressiveCharacter>();
             
             foreach (var collider in notNull)
             {
-                if (collider.TryGetComponent(out IAggressiveCharacter target) == false) continue;
+                if (collider.TryGetComponent(out AggressiveCharacter target) == false) continue;
                 
-                if (target != (IAggressiveCharacter) _origin && target.IsDead == false)
+                if (target != (AggressiveCharacter) _origin && target.IsDead == false)
                 {
                     damageable.Add(target);
                 }

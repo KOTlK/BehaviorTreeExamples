@@ -1,13 +1,14 @@
 ﻿using BananaParty.BehaviorTree;
+using UnityEngine;
 
 namespace Examples.Warrior.Behavior
 {
     public class AttackTarget : BehaviorNode
     {
-        private readonly ITarget<IAggressiveCharacter> _target;
+        private readonly ITarget<AggressiveCharacter> _target;
         private readonly IAggressive _origin;
 
-        public AttackTarget(ITarget<IAggressiveCharacter> target, IAggressive origin)
+        public AttackTarget(ITarget<AggressiveCharacter> target, IAggressive origin)
         {
             _target = target;
             _origin = origin;
@@ -19,10 +20,11 @@ namespace Examples.Warrior.Behavior
             if (_target.Current.IsDead)
             {
                 _target.Reset();
-                return BehaviorNodeStatus.Success;
+                return BehaviorNodeStatus.Failure;
             }
 
             _origin.Attack(_target.Current);
+            Debug.Log("Attacking " + _target.Current);
 
             return BehaviorNodeStatus.Success;
         }

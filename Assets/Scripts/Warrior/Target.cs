@@ -2,17 +2,18 @@
 
 namespace Examples.Warrior
 {
-    public class Target : ITarget<IAggressiveCharacter>
+    public class Target<T> : ITarget<T>
+    where T : class
     {
-        public Target(IAggressiveCharacter target = null)
+        public Target(T target = null)
         {
             Current = target;
         }
         
         public bool HasTarget => Current != null;
-        public IAggressiveCharacter Current { get; private set; }
+        public T Current { get; private set; }
         
-        public void Switch(IAggressiveCharacter target)
+        public void Switch(T target)
         {
             if (target == null)
                 throw new ArgumentNullException(nameof(target),

@@ -18,7 +18,7 @@ namespace Examples.Warrior
         [SerializeField] private Transform[] _patrolWay;
 
         private IHealth _health;
-        private ITarget<IAggressiveCharacter> _target;
+        private ITarget<AggressiveCharacter> _target;
         private IBehaviorNode _behavior;
 
         public bool IsDead => _health.IsOver;
@@ -26,22 +26,17 @@ namespace Examples.Warrior
         private void Start()
         {
             _health = new Health.Health(_maxHealth);
-            _target = new Target();
+            _target = new Target<AggressiveCharacter>();
 
             var points = _patrolWay.Select(trans => (Vector2)trans.position).ToArray();
 
-            _behavior = new SequenceNode(new IBehaviorNode[]
+            _behavior = new SelectorNode(new IBehaviorNode[]
             {
-                new ParallelSequenceNode(new IBehaviorNode[]
+                new ParallelSelectorNode(new IBehaviorNode[]
                 {
-                    new SequenceNode( new IBehaviorNode[]
-                    {
-                        new FindTarget(_targetFindRange, _target, this).Invert(),
-                        new WaitNode(500)
-                    }).RepeatUntilFailure(),
-                    
+                    new FindTarget(_targetFindRange, _target, this).RepeatUntilSuccess(),
                     new Patrol(points, this)
-                }, "Patrol").Invert(),
+                }).Invert(),
                 
                 new ParallelSequenceNode(new IBehaviorNode[]
                 {
@@ -49,13 +44,11 @@ namespace Examples.Warrior
                     {
                         new AttackTarget(_target, this),
                         new WaitNode(_attackDelay)
-                    }),
-                    
+                    }).RepeatUntilFailure(),
                     new FollowTarget(_target, this)
-                }, "Attack")
+                })
             }).Repeat();
         }
-
 
         public void ApplyDamage(float amount) => _health.Lose(amount);
         
